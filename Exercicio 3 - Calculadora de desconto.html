@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoradedesconto</title>
+    <script>
+
+  var produto = prompt("Insira um nome de um produto");
+  var valor = parseFloat(prompt("insira o valor do produto"));
+  var segmento = prompt("insira um segmento\n1)Vestuario\n2)Eletronico\n3)Alimenticio");
+  var valorComDesconto; 
+
+  switch(segmento) {
+      case "1":
+        valorComDesconto = valor - (valor * 5)/100;
+        break;
+      case "2":
+        valorComDesconto = valor - (valor * 8)/100;
+        break;
+      case "3":
+        valorComDesconto = valor - (valor * 10)/100;
+        break;
+      default:
+          document.write = prompt ("Código invalido");
+        break;
+  }
+
+  valorComDesconto = new Intl.NumberFormat("pt-BR", {style:"currency", currency:"BRL",}).format(valorComDesconto);
+
+  alert("Valor com desconto: " + valorComDesconto);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
